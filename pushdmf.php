@@ -63,7 +63,7 @@ $bot = new LINEBot($httpClient, array('channelSecret' => LINE_MESSAGE_CHANNEL_SE
 // userId 
 $userId = 'U7eaa16e2487014784d68e8a7da554368';
 // ทดสอบส่ง push ข้อความอย่างง่าย
-$textPushMessage = $text;                
+$textPushMessage = $test;                
 $messageData = new TextMessageBuilder($textPushMessage);        
              
 $response = $bot->pushMessage($userId,$messageData);
