@@ -1,8 +1,8 @@
 <?php
 
+//require "vendor/autoload.php";
 
-
-require "vendor/autoload.php";
+$test = $_GET['word'];
 
 $access_token = 'Aav9TQOu1BLsnujaHhDhPb+EhQkmziFQCt96vYzhxpQHTKC/5VQSO9Ndh/5mIP3OS13GepqEY11PDM8+SlMT8LRBdQEYTJXo7IpC+s0tZQ9sVLMfHKcAvjo2uzc96XYZPatLpdPLK3JPdgu1GlG8VQdB04t89/1O/w1cDnyilFU=';
 
@@ -13,11 +13,13 @@ $pushID = 'U7eaa16e2487014784d68e8a7da554368';
 $httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient($access_token);
 $bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $channelSecret]);
 
-$textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder('Helloooooooo');
+$textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder($test);
 $response = $bot->pushMessage($pushID, $textMessageBuilder);
 
 echo $response->getHTTPStatus() . ' ' . $response->getRawBody();
 
+exit;
+?>
 
 
 
