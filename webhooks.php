@@ -1,5 +1,7 @@
 <?php // callback.php
 
+$test = $_GET['word'];
+
 $accessToken = "Aav9TQOu1BLsnujaHhDhPb+EhQkmziFQCt96vYzhxpQHTKC/5VQSO9Ndh/5mIP3OS13GepqEY11PDM8+SlMT8LRBdQEYTJXo7IpC+s0tZQ9sVLMfHKcAvjo2uzc96XYZPatLpdPLK3JPdgu1GlG8VQdB04t89/1O/w1cDnyilFU=";//copy Channel access token ตอนที่ตั้งค่ามาใส่
     
     $content = file_get_contents('php://input');
@@ -15,7 +17,7 @@ $accessToken = "Aav9TQOu1BLsnujaHhDhPb+EhQkmziFQCt96vYzhxpQHTKC/5VQSO9Ndh/5mIP3O
     if($message == "สวัสดี"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "สวัสดีจ้าาา";
+        $arrayPostData['messages'][0]['text'] = $test;
         replyMsg($arrayHeader,$arrayPostData);
     }
     #ตัวอย่าง Message Type "Sticker"
