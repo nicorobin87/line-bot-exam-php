@@ -8,15 +8,9 @@ require "vendor/autoload.php";
 
 $test = $_GET['word'];
 
-//$access_token = 'Aav9TQOu1BLsnujaHhDhPb+EhQkmziFQCt96vYzhxpQHTKC/5VQSO9Ndh/5mIP3OS13GepqEY11PDM8+SlMT8LRBdQEYTJXo7IpC+s0tZQ9sVLMfHKcAvjo2uzc96XYZPatLpdPLK3JPdgu1GlG8VQdB04t89/1O/w1cDnyilFU=';
-
-//$channelSecret = '957d18cdc5fe1099cea491013093d89f';
-
-//$pushID = 'U7eaa16e2487014784d68e8a7da554368';
-
-define('LINE_MESSAGE_CHANNEL_ID','1627512422');
-define('LINE_MESSAGE_CHANNEL_SECRET','957d18cdc5fe1099cea491013093d89f');
-define('LINE_MESSAGE_ACCESS_TOKEN','Aav9TQOu1BLsnujaHhDhPb+EhQkmziFQCt96vYzhxpQHTKC/5VQSO9Ndh/5mIP3OS13GepqEY11PDM8+SlMT8LRBdQEYTJXo7IpC+s0tZQ9sVLMfHKcAvjo2uzc96XYZPatLpdPLK3JPdgu1GlG8VQdB04t89/1O/w1cDnyilFU=');
+define('LINE_MESSAGE_CHANNEL_ID','');
+define('LINE_MESSAGE_CHANNEL_SECRET','');
+define('LINE_MESSAGE_ACCESS_TOKEN','');
  
 // กรณีมีการเชื่อมต่อกับฐานข้อมูล
 //require_once("dbconnect.php");
